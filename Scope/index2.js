@@ -1,11 +1,12 @@
-let a = 10;
+console.log(a);
 
-var b = 25;
-console.log(b);
-
-var b = 250;
+let a = 5;
 
 console.log(a);
+
+console.log(b);
+
+var b = 15;
 
 console.log(b);
 
