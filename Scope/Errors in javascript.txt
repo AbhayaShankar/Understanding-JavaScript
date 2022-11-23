@@ -1,0 +1,14 @@
+Interviewer : Are You familiar with different Errors in Javascript? Name a few.
+.
+.
+.
+Answer : Yes, Understanding Errors is very important as it will help in the time of debugging the code if in case anything goes wrong.
+There are basically 3 Important errors - 
+i. referenceError - Accessing a variable even before it has been initialised in case of 'let' and 'const' gives a referenceError.
+		- referenceError: cannot access.
+		- referenceError: not defined.
+
+ii. syntaxErrors - Redeclaring a let variable will give a SyntaxError.
+
+iii. typeErrors - Declaring a 'const' again even when it is being Initialised will give a typeError.
+

@@ -1,14 +1,15 @@
+console.log(b);
 console.log(a);
 
 let a = 5;
 
 console.log(a);
 
-console.log(b);
-
 var b = 15;
 
 console.log(b);
+
+//ABHAYA SHANKAR
 
 // let a = 100; //redeclaration of let variable
 // will give a SYNTAX_ERROR.
