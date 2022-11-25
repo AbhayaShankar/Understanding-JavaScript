@@ -1,13 +1,13 @@
-console.log(b);
-console.log(a);
+console.log(b1);
+console.log(a1);
 
-let a = 5;
+let a1 = 5;
 
-console.log(a);
+console.log(a1);
 
-var b = 15;
+var b1 = 15;
 
-console.log(b);
+console.log(b1);
 
 //ABHAYA SHANKAR
 
@@ -16,14 +16,14 @@ console.log(b);
 
 //ABHAYA SHANKAR
 
-let d;
+let d1;
 
-d = 20;
+d1 = 20;
 
-console.log(d);
+console.log(d1);
 
-const e = 200;
-e = 100; // Here redeclaring a const variable gives a typeError
-console.log(e);
+const e1 = 200;
+e1 = 100; // Here redeclaring a const variable gives a typeError
+console.log(e1);
 
 //ABHAYA SHANKAR
