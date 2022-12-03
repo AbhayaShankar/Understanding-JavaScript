@@ -73,3 +73,40 @@ try {
 } catch (err) {
   alert("Something is wrong.");
 }
+
+//Handling Errors using 'throw' operator
+let json2 = '{ "age": 30 }'; // name not defineed
+
+try {
+  let user = JSON.parse(json2);
+  console.log("check");
+  if (!user.name) {
+    throw new SyntaxError("Incomplete data: no name"); // new error declared using throw error.
+  }
+  kqdgugf;
+  alert(user.name);
+} catch (err) {
+  alert("JSON Error: " + err.message); // JSON Error: Incomplete data: no name
+  alert("JSON Error: " + err.name); // JSON Error: Incomplete data: no name
+}
+
+//Rethrowing Error.
+
+// let json3 = '{ "age": 30 }'; // name not defineed
+// try {
+//   let user2 = JSON.parse(json3);
+//   alert("check");
+//   if (!user2.name) {
+//     throw new SyntaxError("Incomplete data: no name");
+//   }
+
+//   blabla(); // unexpected error
+
+//   alert(user2.name);
+// } catch (err) {
+//   if (err instanceof SyntaxError) {
+//     alert("JSON Error: " + err.message);
+//   } else {
+//     throw err; // rethrow
+//   }
+// }
