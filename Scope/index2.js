@@ -56,25 +56,28 @@ setTimeout(function () {
 */
 /*
 try {
-  errorHappens;
+    errorHappens;
 } catch (error) {
-  alert(error.name);
-  alert(error.message);
-  alert(error.stack);
+    alert(error.name);
+    alert(error.message);
+    alert(error.stack);
 }
 
 */
 
+/*
 let json = '{"data" : "Abhaya" , "age" : 30 }';
 
 try {
-  let user = JSON.parse(json);
-  alert(user.sex); //we are accessing something which is not defined in the json so different error rather than going to catch.
+    let user = JSON.parse(json);
+    alert(user.sex); //we are accessing something which is not defined in the json so different error rather than going to catch.
 } catch (err) {
-  alert("Something is wrong.");
+    alert("Something is wrong.");
 }
+*/
 
 //Handling Errors using 'throw' operator
+/*
 let json2 = '{ "age": 30 }'; // name not defineed
 
 try {
@@ -82,13 +85,14 @@ try {
   console.log("check");
   if (!user.name) {
     throw new SyntaxError("Incomplete data: no name"); // new error declared using throw error.
-  }
-  kqdgugf;
-  alert(user.name);
-} catch (err) {
-  alert("JSON Error: " + err.message); // JSON Error: Incomplete data: no name
-  alert("JSON Error: " + err.name); // JSON Error: Incomplete data: no name
 }
+kqdgugf;
+alert(user.name);
+} catch (err) {
+    alert("JSON Error: " + err.message); // JSON Error: Incomplete data: no name
+    alert("JSON Error: " + err.name); // JSON Error: Incomplete data: no name
+}
+*/
 
 //Rethrowing Error.
 
@@ -110,3 +114,23 @@ try {
 //     throw err; // rethrow
 //   }
 // }
+
+function readData() {
+  let json = '{ "age": 30 }';
+
+  try {
+    // ...
+    blabla(); // ReferenceError not a SyntaxError.
+  } catch (err) {
+    // ...
+    if (!(err instanceof SyntaxError)) {
+      throw err; // rethrow bcoz it dont know what to do with this error.
+    }
+  }
+}
+
+try {
+  readData();
+} catch (err) {
+  alert("External catch got: " + err); // External Catch catches the error.
+}
