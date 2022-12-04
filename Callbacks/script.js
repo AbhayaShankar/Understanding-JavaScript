@@ -17,6 +17,9 @@ function loadScript(src, callback) {
 }
 
 */
+
+/*
+// Runnong script using callbacksS
 function loadScript(src, callback) {
   let script = document.createElement("script");
   script.src = src;
@@ -31,3 +34,19 @@ loadScript(
     alert(_); // _ is a function declared in the loaded script
   }
 );
+
+// That’s called a “callback-based” style of asynchronous programming. 
+//A function that does something asynchronously should provide a callback argument
+//where we put the function to run after it’s complete.
+*/
+
+//Handling Errors in Callbacks
+function loadScript(src, callback) {
+  let script = document.createElement("script");
+  script.src = src;
+
+  script.onload = () => callback(null, script);
+  script.onerror = () => callback(new Error(`Script load error for ${src}`));
+
+  document.head.append(script);
+}
