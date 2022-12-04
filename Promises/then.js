@@ -39,3 +39,13 @@ let promise3 = new Promise(function (resolve, reject) {
 promise3.catch(alert);
 
 //The call .catch(f) is a complete analog of .then(null, f), it’s just a shorthand
+
+//.finally ---
+
+// let promise4 = new Promise((resolve, reject) => {
+//   /* do something that takes time, and then call resolve or maybe reject */
+// })
+//   // runs when the promise is settled, doesn't matter successfully or not
+//   .finally(() => stop loading indicator)
+//   // so the loading indicator is always stopped before we go on
+//   .then(result => show result, err => show error);
