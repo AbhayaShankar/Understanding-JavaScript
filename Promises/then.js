@@ -49,3 +49,39 @@ promise3.catch(alert);
 //   .finally(() => stop loading indicator)
 //   // so the loading indicator is always stopped before we go on
 //   .then(result => show result, err => show error);
+
+//handling functions by Promises instead of Callbacks...
+/*
+function loadScript(src, callback) {
+  let script = document.createElement("script");
+  script.src = src;
+
+  script.onload = () => {
+    callback(null, script);
+  };
+
+  script.onerror = () => {
+    callback(new Error(`Error Occured for ${src}`));
+  };
+  document.head.append(script);
+}
+*/
+
+function loadScript(src) {
+  return new Promise(function (resolve, reject) {
+    let script = document.createElement("script");
+    script.src = src;
+
+    script.onload = () => {
+      resolve("Executed");
+    };
+
+    script.onerror = () => {
+      reject(new Error(`Error Occured for ${src}`));
+    };
+
+    document.head.append(script);
+  });
+}
+
+// code used by handling Promises makes code look neatier and clean.
